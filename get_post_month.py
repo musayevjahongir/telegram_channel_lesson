@@ -18,4 +18,4 @@ def get_post_month(data:dict,month:int)->int:
             s+=1
     return s
 data=fromJson("data/result.json")
-print(get_post_month(data,9))
+print(get_post_month(data,11))
