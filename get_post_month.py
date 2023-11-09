@@ -12,5 +12,10 @@ def get_post_month(data:dict,month:int)->int:
     Returns: 
         int: the number of posts for the given month
     """
-    
-    return
+    s=0
+    for i in data["messages"]:
+        if i["date"][5:7]==str(month):
+            s+=1
+    return s
+data=fromJson("data/result.json")
+print(get_post_month(data,9))
