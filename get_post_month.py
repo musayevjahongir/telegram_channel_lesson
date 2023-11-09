@@ -14,7 +14,7 @@ def get_post_month(data:dict,month:int)->int:
     """
     s=0
     for i in data["messages"]:
-        if i["date"][5:7]==str(month):
+        if int(i["date"][5:7])==month:
             s+=1
     return s
 data=fromJson("data/result.json")
